@@ -175,6 +175,10 @@ $(document).ready(function()
 		menuActive = false;
 	}
 
+	function handleFormClick() {
+		window.location.reload();
+	}
+
 	/* 
 
 	5. Init Google Map
