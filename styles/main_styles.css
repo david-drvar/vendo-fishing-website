@@ -350,16 +350,16 @@ section
 {
 	margin-left: 156px;
 }
-.main_nav > ul > li, .main_nav >ul > li > ul > li > ul > li
+.main_nav > ul > li
 {
 	display: inline-block;
 	position: relative;
 }
-.main_nav > ul > li:not(:last-child),  .main_nav >ul > li > ul > li > ul > li:not(:last-child)
+.main_nav > ul > li:not(:last-child)
 {
 	margin-right: 46px;
 }
-.main_nav > ul > li > a, .main_nav >ul > li > ul > li > ul > li > a
+.main_nav > ul > li > a
 {
 	font-size: 16px;
 	font-weight: 600;
@@ -371,7 +371,7 @@ section
 	transition: all 200ms ease;
 }
 .main_nav > ul > li > a:hover,
-.main_nav > ul > li.active > a, .main_nav >ul > li > ul > li > ul > li > a:hover, .main_nav >ul > li > ul > li > ul > li.active
+.main_nav > ul > li.active > a
 {
 	color: #1b1b1b;
 }
@@ -395,7 +395,7 @@ section
 {
 	color: #1b1b1b;
 }
-.subMenu ul, .subMenu ul .superSubMenu ul
+.subMenu ul
 {
 	position: absolute;
 	right: -15px;
@@ -414,7 +414,7 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.subMenu:hover ul, .subMenu ul .superSubMenu:hover ul
+.subMenu:hover ul
 {
 	visibility: visible;
 	opacity: 1;
@@ -442,9 +442,80 @@ section
 
 
 
+
+
+
+
+.subMenu ul .superSubMenu ul
+{
+	position: absolute;
+	right: -300px;
+	top: calc(100% + 0px);
+	text-align: right;
+	background: #FFFFFF;
+	padding-right: 25px;
+	padding-left: 35px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	display: none;
+	opacity: 0;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	width: 135px;
+}
+/*.subMenu ul .superSubMenu ul*/
+/*{*/
+/*	display: inline-block;*/
+/*	position: relative;*/
+/*}*/
+.subMenu ul .superSubMenu:hover ul
+{
+	display: block;
+	opacity: 1;
+	top: calc(100% - 46px);
+	left: calc(100%  + 12px);
+}
+.main_nav .subMenu li {
+	position: relative;
+}
+.main_nav .subMenu .superSubMenu li {
+	width: 10px;
+}
+nav .superSubMenu {
+	top: 0;
+	right : 0;
+	left : 0;
+	/*transform: translate(100%, 0);*/
+}
+.main_nav >ul > li > ul > li > ul > li:not(:last-child)
+{
+	margin-right: 0px;
+}
+.main_nav >ul > li > ul > li > ul > li
+{
+	position: relative;
+}
+.main_nav >ul > li > ul > li > ul > li > a:hover, .main_nav >ul > li > ul > li > ul > li.active
+{
+	color: #1b1b1b;
+}
+.main_nav >ul > li > ul > li > ul > li > a
+{
+	font-size: 14px;
+	font-weight: 600;
+	color: #767676;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
 .main_nav ul li.subMenu ul li.superSubMenu::after {
 	position: absolute;
-	top: 30%;
+	top: 35%;
 	-webkit-transform: translateY(-30%);
 	-moz-transform: translateY(-30%);
 	-ms-transform: translateY(-30%);
@@ -456,6 +527,10 @@ section
 	content: '\f054';
 	color: #767676;
 }
+
+
+
+
 
 
 
