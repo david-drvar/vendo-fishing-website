@@ -350,16 +350,16 @@ section
 {
 	margin-left: 156px;
 }
-.main_nav > ul > li
+.main_nav > ul > li, .main_nav >ul > li > ul > li > ul > li
 {
 	display: inline-block;
 	position: relative;
 }
-.main_nav > ul > li:not(:last-child)
+.main_nav > ul > li:not(:last-child),  .main_nav >ul > li > ul > li > ul > li:not(:last-child)
 {
 	margin-right: 46px;
 }
-.main_nav > ul > li > a
+.main_nav > ul > li > a, .main_nav >ul > li > ul > li > ul > li > a
 {
 	font-size: 16px;
 	font-weight: 600;
@@ -371,11 +371,11 @@ section
 	transition: all 200ms ease;
 }
 .main_nav > ul > li > a:hover,
-.main_nav > ul > li.active > a
+.main_nav > ul > li.active > a, .main_nav >ul > li > ul > li > ul > li > a:hover, .main_nav >ul > li > ul > li > ul > li.active
 {
 	color: #1b1b1b;
 }
-.main_nav ul li.hassubs::after
+.main_nav ul li.subMenu::after
 {
 	position: absolute;
 	top: 50%;
@@ -395,7 +395,7 @@ section
 {
 	color: #1b1b1b;
 }
-.hassubs ul
+.subMenu ul, .subMenu ul .superSubMenu ul
 {
 	position: absolute;
 	right: -15px;
@@ -414,17 +414,17 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.hassubs:hover ul
+.subMenu:hover ul, .subMenu ul .superSubMenu:hover ul
 {
 	visibility: visible;
 	opacity: 1;
 	top: calc(100% + 0px);
 }
-.hassubs ul li:not(:last-child)
+.subMenu ul li:not(:last-child)
 {
 	margin-bottom: 11px;
 }
-.hassubs ul li a
+.subMenu ul li a
 {
 	font-size: 14px;
 	font-weight: 600;
@@ -435,10 +435,73 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.hassubs ul li a:hover
+.subMenu ul li a:hover
 {
 	color: #1b1b1b;
 }
+
+
+
+.main_nav ul li.subMenu ul li.superSubMenu::after {
+	position: absolute;
+	top: 30%;
+	-webkit-transform: translateY(-30%);
+	-moz-transform: translateY(-30%);
+	-ms-transform: translateY(-30%);
+	-o-transform: translateY(-30%);
+	transform: translateY(-30%);
+	left: calc(100% + 3px);
+	font-family: 'FontAwesome';
+	font-size: 10px;
+	content: '\f054';
+	color: #767676;
+}
+
+
+
+
+
+/*.main_nav>.subMenu>.superSubMenu {*/
+/*		display: none;*/
+/*		position: absolute;*/
+/*}*/
+/*.main_nav>.subMenu>li:hover>.superSubMenu {*/
+/*	display: block;*/
+/*}*/
+
+
+/*.main_nav >ul > li > ul > li > ul > li {*/
+/*	display: inline-block;*/
+/*	position: relative;*/
+/*}*/
+/*.main_nav >ul > li > ul > li > ul > li:not(:last-child)*/
+/*{*/
+/*	margin-right: 46px;*/
+/*}*/
+/*.main_nav >ul > li > ul > li > ul > li > a*/
+/*{*/
+/*	font-size: 16px;*/
+/*	font-weight: 600;*/
+/*	color: #767676;*/
+/*	-webkit-transition: all 200ms ease;*/
+/*	-moz-transition: all 200ms ease;*/
+/*	-ms-transition: all 200ms ease;*/
+/*	-o-transition: all 200ms ease;*/
+/*	transition: all 200ms ease;*/
+/*	transform: translateY(-300%);*/
+/*	left: calc(100% + 3px);*/
+/*}*/
+/*.main_nav >ul > li > ul > li > ul > li > a:hover,*/
+/*.main_nav >ul > li > ul > li > ul > li.active > a*/
+/*{*/
+/*	color: #1b1b1b;*/
+/*}*/
+
+
+
+
+
+
 .header_extra
 {
 
